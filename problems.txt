@@ -1,0 +1,8 @@
+## problems that need fixing
+
+1. nginx is putting out a 403
+
+2. neo4j
+    - manual steps of
+        1. setting neo4j password before importing 
+        2. cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p neo4j --format plain  # needs to be automatically run - perhaps build in an extra docker lay?
