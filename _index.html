@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <title>Neovis.js Simple Example</title>
+    <style type="text/css">
+        html, body {
+            font: 16pt arial;
+        }
+
+        #viz {
+            width: 1100px;
+            height: 600px;
+            border: 1px solid lightgray;
+            font: 18pt arial;
+        }
+
+    </style>
+
+    <!-- FIXME: load from dist -->
+    <script type="text/javascript" src="https://cdn.neo4jlabs.com/neovis.js/v1.5.0/neovis.js"></script>
+
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+		// define config car
+		// instantiate nodevis object
+		// draw
+
+		var viz;
+
+		function draw() {
+			var config = {
+				container_id: "viz",
+
+				// running in a neo4j sandbox
+
+				server_url: "bolt://<IP>:<PORT>",
+
+				server_user: "<uname>",
+				server_password: "<password>",
+
+				labels: {
+                    "Org": {
+                        "caption": "sname",
+						"font": {
+							"size":26,
+							"color":"#0000FF"
+						},
+                        "title_properties": [
+                            "name"
+                        ]
+						},
+					
+					"FrameWork": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#00FF00"					
+						}
+					},
+					"Publication": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#800080"					
+							}
+						},
+					"Certification": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#FF0000"					
+							}
+					},
+					"Education": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#FFFF00"					
+							}
+					},
+					"Program": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#000000"					
+							}
+					},
+					"Regulatory": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#00FF00"					
+							}
+					},
+					"Tools": {
+							"caption": "sname",
+							"font": {
+								"size":26,
+								"color":"#00FFFF"					
+							}
+					}
+					
+                },
+                relationships: {
+                    "APPLIES_TO": {
+                        
+						"caption": true,
+						"font.size": 14,
+						"font.color": "#3434343"
+					},
+					"CERTIFIED_BY": {},
+					"PARENT": {},
+					"PRODUCTED_BY": {}
+				},
+				
+				initial_cypher: "MATCH (n)-[r]-(m), (q) RETURN * "
+			};
+
+			viz = new NeoVis.default(config);
+			viz.render();
+			console.log(viz);
+
+		}
+    </script>
+</head>
+
+<body onload="draw()">
+
+<h1>The UK Cyber Security Structure</h1>
+
+A Graph of the UK Security Structure
+
+
+<div id="viz"></div>
+
+
+Cypher query: <textarea rows="2" cols=50 id="cypher"></textarea><br>
+<input type="submit" value="Submit" id="reload">
+<input type="submit" value="Stabilize" id="stabilize">
+
+<p style="color:Blue;">Organization blue</p>  
+<p style="color:Green;">Framework green</p> 
+<p style="color:Black;">program black</p>
+<p style="color:Red;">certification red</p>
+<p style="color:Lime;">Regulatory lime</p>
+<p style="color:purple;">Publication purple</p>
+<p style="color:yellowgreen;">Education yellow</p>
+<p style="color:aqua;">tools aqua</p>
+
+
+</body>
+
+<script>
+	$("#reload").click(function() {
+
+		var cypher = $("#cypher").val();
+
+		if (cypher.length > 3) {
+			viz.renderWithCypher(cypher);
+		} else {
+			console.log("reload");
+			viz.reload();
+
+		}
+
+	});
+
+	$("#stabilize").click(function() {
+		viz.stabilize();
+	})
+
+</script>
+</html>
