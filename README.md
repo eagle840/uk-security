@@ -12,5 +12,7 @@ Directions:
 
 OR
 
-just run the docker-compose file
+just run the docker-compose file  - not fully working yet
+
+
 
