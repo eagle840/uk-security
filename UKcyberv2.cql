@@ -105,7 +105,7 @@ CREATE (:Tools {name: 'KALI', uri: 'https://www.kali.org', description: 'Linux d
 CREATE (:Tools {name: 'Parrot OS', uri: 'https://parrotlinux.org', description: 'Linux distribution for Advanced Penetration Testing'})
 CREATE (:Program {name: 'CyberUP', uri: 'https://www.cyberupcampaign.com/', description: 'campaign calling for reform of the UKs cybercrime laws' })
 CREATE (:Education {name: 'Crucial Academy', uri: 'https://www.crucialacademy.co.uk/'})
-
+;
 
 MATCH (a:Org), (b:FrameWork) WHERE a.name='The University of Bristol with the University of Bath' AND b.name='ACE-CSR' MERGE (a)-[r:PARENT]->(b);
 MATCH (a:Org), (b:FrameWork) WHERE a.name='University College London' AND b.name='ACE-CSR' MERGE (a)-[r:PARENT]->(b);
