@@ -10,9 +10,12 @@ services:
      - .:/usr/share/nginx/html/
   neo4j:
     image: neo4j
+    environment:
+      RACK_ENV: development
+      NEO4J_AUTH: neo4j/test
     ports:
     - "7474:7474"
     - "7687:7687"
     volumes:
     - ./:/var/lib/neo4j/uksec
-    command: cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p neo4j --format plain
+    command: cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p test --format plain
