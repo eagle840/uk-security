@@ -110,8 +110,8 @@ CREATE (:Org {name: 'Ministry of Defense', sname: 'MOD', url: 'https://www.gov.u
 ;
 
 
-MATCH (a:Org), (b:org) WHERE a.name='National Cyber Force' AND b.name='GCHQ' MERGE (a)-[r:PARENT]->(b);
-MATCH (a:Org), (b:org) WHERE a.name='National Cyber Force' AND b.sname='MOD' MERGE (a)-[r:PARENT]->(b);
+MATCH (a:Org), (b:Org) WHERE a.name='National Cyber Force' AND b.name='GCHQ' MERGE (a)-[r:PARENT]->(b);
+MATCH (a:Org), (b:Org) WHERE a.name='National Cyber Force' AND b.sname='MOD' MERGE (a)-[r:PARENT]->(b);
 MATCH (a:Org), (b:FrameWork) WHERE a.name='The University of Bristol with the University of Bath' AND b.name='ACE-CSR' MERGE (a)-[r:PARENT]->(b);
 MATCH (a:Org), (b:FrameWork) WHERE a.name='University College London' AND b.name='ACE-CSR' MERGE (a)-[r:PARENT]->(b);
 MATCH (a:Org), (b:FrameWork) WHERE a.name='Royal Holloway, University of London' AND b.name='ACE-CSR' MERGE (a)-[r:PARENT]->(b);
