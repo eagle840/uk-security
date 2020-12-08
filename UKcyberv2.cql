@@ -46,6 +46,7 @@
 
 CREATE (:Org {name: 'National Cyber Security Centre', sname: 'NCSC', url: 'https://www.ncsc.gov.uk/'})
 CREATE (:Org {name: 'GCHQ', sname: 'GCHQ', url: 'https://www.gchq.gov.uk/'})
+CREATE (:Org {name: 'Information Commissioners Office', sname: 'ICO', url: 'https://ico.org.uk/'})
 CREATE (:Org {name: 'Colloquium on Information Systems Security Education UK', sname: 'CISSEUK', url: 'https://cisseuk.org/', role: 'education'})
 CREATE (:Org {name: 'Department for Digital, Culture, Media and Sport', sname: 'DCMS', url: 'https://www.gov.uk/dcms'})
 CREATE (:FrameWork {name: 'Cyber Assessment Framework 3.0', sname: 'CAF3', url:'https://www.ncsc.gov.uk/blog-post/the-cyber-assessment-framework-3-0'})
