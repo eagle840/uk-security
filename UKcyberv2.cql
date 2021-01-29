@@ -108,6 +108,7 @@ CREATE (:Program {name: 'CyberUP', uri: 'https://www.cyberupcampaign.com/', desc
 CREATE (:Education {name: 'Crucial Academy', uri: 'https://www.crucialacademy.co.uk/'})
 CREATE (:Org {name: 'National Cyber Force', uri: 'https://en.wikipedia.org/wiki/National_Cyber_Force'})
 CREATE (:Org {name: 'Ministry of Defense', sname: 'MOD', url: 'https://www.gov.uk/government/organisations/ministry-of-defence'})
+CREATE (:Org {name: 'Centre for the Protection of National Infrastructure', sname: 'CPNI', url: 'https://www.cpni.gov.uk/'})
 ;
 
 
