@@ -109,6 +109,7 @@ CREATE (:Education {name: 'Crucial Academy', uri: 'https://www.crucialacademy.co
 CREATE (:Org {name: 'National Cyber Force', uri: 'https://en.wikipedia.org/wiki/National_Cyber_Force'})
 CREATE (:Org {name: 'Ministry of Defense', sname: 'MOD', url: 'https://www.gov.uk/government/organisations/ministry-of-defence'})
 CREATE (:Org {name: 'Centre for the Protection of National Infrastructure', sname: 'CPNI', url: 'https://www.cpni.gov.uk/'})
+CREATE (:Regulatory {name: 'UK security clearance', sname: 'vetting', url: 'https://en.wikipedia.org/wiki/Security_vetting_in_the_United_Kingdom', region: 'UK'})
 ;
 
 
