@@ -14,5 +14,9 @@ OR
 
 just run the docker-compose file  - not fully working yet
 
+  - using a browser connect to localhost:7474
+  - in the page, login with neo4j and pw: test
+  - past in the contents of UKcyberv2.cql  and run
+  - run 'MATCH (n) RETURN (n)' to show all nodes and relationships.
 
 
