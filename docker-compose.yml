@@ -2,12 +2,13 @@
 version: '2'
 
 services:
-  web:
-    image: nginx
-    ports:
-     - "80:80"
-    volumes:
-     - .:/usr/share/nginx/html/
+
+#   web:
+#     image: nginx
+#     ports:
+#      - "80:80"
+#     volumes:
+#      - .:/usr/share/nginx/html/
      
      
   neo4j:
@@ -21,4 +22,5 @@ services:
     - "7687:7687"
     volumes:
     - ./:/var/lib/neo4j/uksec
-    command: cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p test --format plain
+    # command: cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p test --format plain
+    # entrypoint: cat ./uksec/UKcyberv2.cql | cypher-shell -u neo4j -p test --format plain
