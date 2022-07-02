@@ -110,6 +110,7 @@ CREATE (:Org {name: 'National Cyber Force', uri: 'https://en.wikipedia.org/wiki/
 CREATE (:Org {name: 'Ministry of Defense', sname: 'MOD', url: 'https://www.gov.uk/government/organisations/ministry-of-defence'})
 CREATE (:Org {name: 'Centre for the Protection of National Infrastructure', sname: 'CPNI', url: 'https://www.cpni.gov.uk/'})
 CREATE (:Regulatory {name: 'UK security clearance', sname: 'vetting', url: 'https://en.wikipedia.org/wiki/Security_vetting_in_the_United_Kingdom', region: 'UK'})
+CREATE (:FrameWork {name: 'Cyber Assessment Framework', sname: 'CAF', url: 'https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework'})
 ;
 
 
