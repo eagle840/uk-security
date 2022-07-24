@@ -111,6 +111,9 @@ CREATE (:Org {name: 'Ministry of Defense', sname: 'MOD', url: 'https://www.gov.u
 CREATE (:Org {name: 'Centre for the Protection of National Infrastructure', sname: 'CPNI', url: 'https://www.cpni.gov.uk/'})
 CREATE (:Regulatory {name: 'UK security clearance', sname: 'vetting', url: 'https://en.wikipedia.org/wiki/Security_vetting_in_the_United_Kingdom', region: 'UK'})
 CREATE (:FrameWork {name: 'Cyber Assessment Framework', sname: 'CAF', url: 'https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework'})
+CREATE (:Org {name: 'National Security Council', sname: 'NSC', url: 'https://www.gov.uk/government/groups/national-security-council'})
+CREATE (:Publication {name: 'National Security Strategy', url: 'https://committees.parliament.uk/committee/111/national-security-strategy-joint-committee/publications/', Q: 'Q16988240'})
+
 ;
 
 
