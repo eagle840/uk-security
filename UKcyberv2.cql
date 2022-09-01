@@ -113,6 +113,7 @@ CREATE (:Regulatory {name: 'UK security clearance', sname: 'vetting', url: 'http
 CREATE (:FrameWork {name: 'Cyber Assessment Framework', sname: 'CAF', url: 'https://www.ncsc.gov.uk/collection/caf/cyber-assessment-framework'})
 CREATE (:Org {name: 'National Security Council', sname: 'NSC', url: 'https://www.gov.uk/government/groups/national-security-council'})
 CREATE (:Publication {name: 'National Security Strategy', url: 'https://committees.parliament.uk/committee/111/national-security-strategy-joint-committee/publications/', Q: 'Q16988240'})
+CREATE (:Org {name: 'UK Cyber Exchange/cyber demonstration center', url: 'https://cyberexchange.uk.net/', Q: 'Q16988240'})
 
 ;
 
