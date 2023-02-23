@@ -148,5 +148,4 @@ MATCH (a:Certification), (b:Org) WHERE a.name='Certified Information Security Ma
 MATCH (a:Certification), (b:Org) WHERE a.name='Cyber Essentials' AND b.name='ISACA' MERGE (a)-[r:PRODUCED_BY]->(b);
 MATCH (a:FrameWork), (b:Org) WHERE a.name='COBIT' AND b.name='ISACA' MERGE (a)-[r:PRODUCED_BY]->(b);
 MATCH (a:Org), (b:Org) WHERE a.name='GCHQ' AND b.name='National Cyber Security Centre' MERGE (a)-[r:PARENT]->(b);
-
 // above good
